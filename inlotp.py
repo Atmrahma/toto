@@ -1,19 +1,18 @@
 # -*- coding: utf-8 -*-
-"""This script is used to check the existence, extension and content
-of a fasta file"""
+"""This script is used to check the existence, extension and content of a fasta file"""
 from os.path import exists
-# the exists function from the os.path checks the existance of a file 
+# the exists function from the os.path checks the existance of a file
 import sys
 # sys provides to manipulate different parts of the py runtime environement
 ADN_LIST=("A","C","G","T")#list of the possible DNA words
 def read_dna(fastafile):
     """This function is used to check the contens of a fasta file"""
-    with open(fastafile,"r") as file: # open the file
-        lines = file.readlines() # reads all the contents from the given file
-        counter = 0 # initiate the counter of lines
-        header = "" # empty header for the sequences name
-        for line in lines: # reads line by line all the lines
-            counter+= 1 # for each line it starts counting
+    with open(fastafile,"r") as file:# open the file
+        lines = file.readlines()# reads all the contents from the given file
+        counter = 0# initiate the counter of lines
+        header = ""# empty header for the sequences name
+        for line in lines:# reads line by line all the lines
+            counter+= 1# for each line it starts counting
             if line[0] == ">": # if the 1st word in the file starts with '>'
                 header = line.strip()# send the corresponding line to the header
             else:# in case the line doesn't start with '>'
@@ -30,7 +29,7 @@ def check_fasta(fastafile):
     """This function is used to check the existence of the given file"""
     file_existance= exists(fastafile)#check the existance of the file in your computer
     if file_existance: #in case file exists
-        ext= fastafile.split(".")[1]#get the words after the (.) 
+        ext= fastafile.split(".")[1]#get the words after the (.)
         fatsa_extension= ["fna","faa","fa","ffn","frn"] #check the extension of the file
         if ext not in fatsa_extension:
             print("This is not a fasta file: ("+fastafile +") please check the file extension!")
@@ -41,4 +40,5 @@ def check_fasta(fastafile):
 if __name__=="__main__":
     for argument in sys.argv[1:]: #for each argument in sys.argv
         check_fasta(argument) #verify the existance and the extension of file
+
 
