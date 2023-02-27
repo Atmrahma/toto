@@ -1,7 +1,7 @@
-#TP4_INLO
-TP4 Ingénierie Logicielle et science reproductible 
+# TP4
+TP4 Ingénierie logicielle et science reproductible 
 
-#About the program
+## About the program
 Ce programme sert à la création d'un arbre binaire, il se compose de 2 classes (BinaryTree et Node) et 10 méthodes.
 
 La classe BinaryTree est utilisée pour la création de la racine de l'arbre, tandis que la classe Node
