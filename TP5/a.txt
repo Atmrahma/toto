@@ -1,0 +1,4 @@
+Siamois,4,carnivore,4,Molly
+Frison,12,herbivore,4,Sultan
+Husky,3,carnivore,4,Kenai
+Humain,24,mangetout,3,Sonia
