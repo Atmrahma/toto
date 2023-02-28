@@ -78,6 +78,6 @@ if __name__ == "__main__":
     path= "a.txt"
     model = Model(path)
     model.read_file()
-    print(model.dico_animaux["Lynn"])
+    print(model.dico_animaux["Sonia"])
     print("12345678")
     model.close()
